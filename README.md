@@ -1,16 +1,91 @@
-# little_guardian
+# Little Guardiance
 
-A new Flutter project.
+**Little Guardiance**는 위험 상태에 있는 아이들을 보호하기 위해 설계된 앱으로, 부모나 보호자가 아이의 스마트폰을 원격으로 제어하여 주변 소리를 듣거나 카메라를 켜서 주변 상황을 실시간으로 탐색할 수 있도록 돕습니다. 이 앱은 Flutter로 개발되었으며, 직관적인 사용자 인터페이스와 심플한 디자인을 통해 사용자가 쉽게 접근할 수 있는 환경을 제공합니다.
 
-## Getting Started
+## 주요 기능
 
-This project is a starting point for a Flutter application.
+- **아이 폰 주변 소리 듣기**: 부모나 보호자가 원격으로 아이의 스마트폰에 접속하여 주변 소리를 실시간으로 청취할 수 있습니다.
+- **아이 폰으로 카메라 켜기**: 아이의 스마트폰 카메라를 원격으로 활성화하여 주변 환경을 탐색할 수 있습니다.
+- **위험 상황 알림**: 아이의 스마트폰이 위험 신호를 감지하면 부모나 보호자에게 즉시 알림을 보냅니다.
+- **위치 추적**: 아이의 현재 위치를 실시간으로 추적하여 안전을 확인할 수 있습니다.
+- **비상 연락처로 자동 연결**: 위급 상황 시, 사전에 설정된 비상 연락처로 자동 연결됩니다.
 
-A few resources to get you started if this is your first Flutter project:
+## Flutter로 개발된 이유
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **크로스 플랫폼 지원**: Flutter를 사용하여 iOS와 Android 모두에서 동일한 사용자 경험을 제공할 수 있습니다.
+- **빠른 개발**: Flutter의 Hot Reload 기능을 통해 개발 속도를 높이고, UI 요소들을 신속하게 수정 및 테스트할 수 있습니다.
+- **고성능 UI**: Flutter는 네이티브 수준의 성능을 제공하며, 아름다운 애니메이션과 부드러운 전환 효과를 구현할 수 있습니다.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 디자인 철학
+
+Little Guardiance는 다음과 같은 디자인 철학을 바탕으로 설계되었습니다:
+
+- **사용자 중심의 인터페이스**: 부모나 보호자가 앱을 쉽게 사용할 수 있도록 직관적이고 간결한 UI/UX 디자인을 채택하였습니다.
+- **안전성 강조**: 위험 상황에서 신속하게 대응할 수 있도록 시각적 경고와 직관적인 내비게이션을 제공하여 사용자의 긴급 대응을 지원합니다.
+- **모던하고 깔끔한 디자인**: 시각적 복잡성을 최소화하고, 주요 기능에 집중할 수 있도록 디자인 요소를 배치하였습니다.
+
+## 설치 방법
+
+Little Guardiance를 설치하려면 다음 단계를 따르세요:
+
+1. 이 리포지토리를 클론합니다:
+    ```bash
+    git clone https://github.com/yourusername/little-guardiance.git
+    ```
+
+2. 프로젝트 디렉토리로 이동합니다:
+    ```bash
+    cd little-guardiance
+    ```
+
+3. 필요한 Flutter 종속성을 설치합니다:
+    ```bash
+    flutter pub get
+    ```
+
+4. 앱을 빌드하고 실행합니다:
+    ```bash
+    flutter run
+    ```
+
+## 사용 방법
+
+1. 앱을 실행한 후, 부모나 보호자 계정으로 로그인합니다.
+2. 자녀의 스마트폰과 연결된 계정을 등록합니다.
+3. 대시보드에서 제공되는 기능을 이용하여 자녀의 안전을 실시간으로 모니터링합니다.
+   - **소리 듣기**: "소리 듣기" 버튼을 클릭하여 자녀의 스마트폰 주변 소리를 청취합니다.
+   - **카메라 켜기**: "카메라 켜기" 버튼을 클릭하여 자녀의 스마트폰 카메라를 원격으로 활성화합니다.
+4. 위급 상황 발생 시, 앱이 자동으로 알림을 전송합니다.
+
+## 디자인 요소
+
+- **색상 팔레트**: 주로 부드러운 파스텔 톤을 사용하여 안정감과 신뢰성을 전달합니다.
+- **아이콘과 버튼**: 직관적이고 명확한 아이콘과 버튼을 사용하여 기능을 쉽게 탐색할 수 있습니다.
+- **애니메이션**: 중요 기능에 자연스러운 애니메이션을 추가하여 사용자 경험을 향상시켰습니다.
+
+## 기여 방법
+
+Little Guardiance에 기여하고 싶다면 다음 단계를 따르세요:
+
+1. 이 리포지토리를 포크합니다.
+2. 새로운 기능이나 버그 수정을 위한 브랜치를 생성합니다:
+    ```bash
+    git checkout -b feature/새기능
+    ```
+3. 코드를 작성하고 커밋합니다:
+    ```bash
+    git commit -m "Add 새로운 기능"
+    ```
+4. 변경 사항을 푸시합니다:
+    ```bash
+    git push origin feature/새기능
+    ```
+5. Pull Request를 생성하여 변경 사항을 제출합니다.
+
+## 라이선스
+
+이 프로젝트는 [MIT 라이선스](LICENSE)에 따라 배포됩니다.
+
+## 문의
+
+추가적인 문의 사항이 있으시면 [이메일](exok1and1m@gmail.com)로 연락해 주세요.
