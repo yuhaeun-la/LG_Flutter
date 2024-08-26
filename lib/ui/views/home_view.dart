@@ -45,7 +45,7 @@ class HomeView extends StatelessWidget {
                         const CircleAvatar(
                           radius: 40,
                           backgroundImage:
-                          AssetImage('lib/utils/assets/mainIcon.png'),
+                          AssetImage('lib/utils/assets/user1.jpg'),
                         ),
                         const SizedBox(width: 20),
                         Column(
