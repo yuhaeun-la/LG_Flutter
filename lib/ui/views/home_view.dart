@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:little_guardian/ui/views/buttons/home_button.dart';
+// import 'package:little_guardian/lib/ui/views/buttons/home_button.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -78,37 +80,39 @@ class HomeView extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    ElevatedButton.icon(
-                      onPressed: () {
-                        // Implement your action here
-                      },
-                      icon: const Icon(Icons.hearing, size: 30),
-                      label: const Text('주변소리듣기'),
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 15, horizontal: 25),
-                      ),
-                    ),
-                    ElevatedButton.icon(
-                      onPressed: () {
-                        // Implement your action here
-                      },
-                      icon: const Icon(Icons.notifications, size: 30),
-                      label: const Text(
-                        '비상알람\n울리기',
-                        textAlign: TextAlign.center,
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 15, horizontal: 25),
-                      ),
-                    ),
+                    HomeButton(icon: Icons.hearing, label: '주변소리듣기', onPressed: (){}),
+                    HomeButton(icon: Icons.notification_add, label: '알람울리기', onPressed: (){})
+                    // ElevatedButton.icon(
+                    //   onPressed: () {
+                    //     // Implement your action here
+                    //   },
+                    //   icon: const Icon(Icons.hearing, size: 30),
+                    //   label: const Text('주변소리듣기'),
+                    //   style: ElevatedButton.styleFrom(
+                    //     shape: RoundedRectangleBorder(
+                    //       borderRadius: BorderRadius.circular(10),
+                    //     ),
+                    //     padding: const EdgeInsets.symmetric(
+                    //         vertical: 15, horizontal: 25),
+                    //   ),
+                    // ),
+                    // ElevatedButton.icon(
+                    //   onPressed: () {
+                    //     // Implement your action here
+                    //   },
+                    //   icon: const Icon(Icons.notifications, size: 30),
+                    //   label: const Text(
+                    //     '비상알람\n울리기',
+                    //     textAlign: TextAlign.center,
+                    //   ),
+                    //   style: ElevatedButton.styleFrom(
+                    //     shape: RoundedRectangleBorder(
+                    //       borderRadius: BorderRadius.circular(10),
+                    //     ),
+                    //     padding: const EdgeInsets.symmetric(
+                    //         vertical: 15, horizontal: 25),
+                    //   ),
+                    // ),
                   ],
                 ),
               ],
