@@ -1,8 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
-class LandingPage extends StatelessWidget {
-  const LandingPage({super.key});
+class LandingView extends StatelessWidget {
+  const LandingView({super.key});
 
   @override
   Widget build(BuildContext context) {
