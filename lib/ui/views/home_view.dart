@@ -14,7 +14,6 @@ class HomeView extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                // Header with logo and title
                 Center(
                   child: Column(
                     children: const [
@@ -35,7 +34,6 @@ class HomeView extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                // Child card widget (Displays child's information)
                 Card(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),

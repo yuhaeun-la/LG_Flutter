@@ -14,15 +14,20 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton.icon(
-      onPressed: onPressed,
-      icon: Icon(icon, size: 30),
-      label: Text(label, textAlign: TextAlign.center),
-      style: ElevatedButton.styleFrom(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
+    return SizedBox(
+      width: 100,
+      height: 60,
+      child: ElevatedButton.icon(
+        onPressed: onPressed,
+        icon: Icon(icon, size: 30),
+        label: Text(label, textAlign: TextAlign.center),
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
+          fixedSize: const Size(200, 30)
         ),
-        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
       ),
     );
   }
