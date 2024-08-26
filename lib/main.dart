@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:little_guardian/ui/views/home_view.dart';
 import 'package:little_guardian/ui/views/landing_view.dart';
 
 void main() {

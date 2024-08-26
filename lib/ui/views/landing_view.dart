@@ -16,26 +16,23 @@ class LandingPage extends StatelessWidget {
               width: 100,
               height: 100,
             ),
-            const SizedBox(height: 5), // 이미지와 텍스트 사이의 간격
+            const SizedBox(height: 5),
             const Text(
               'Little',
-              textAlign: TextAlign.center, // 텍스트 가운데 정렬
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 65,
                 fontWeight: FontWeight.bold,
-                fontFamily: 'Roboto', // 설정한 글꼴
+                fontFamily: 'Roboto',
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(top: 1.0),
-              child: Text(
-                'Guardian',
-                textAlign: TextAlign.center, // 텍스트 가운데 정렬
-                style: TextStyle(
-                  fontSize: 36,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Roboto', // 설정한 글꼴
-                ),
+            Text(
+              'Guardian',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 36,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Roboto',
               ),
             ),
           ],
