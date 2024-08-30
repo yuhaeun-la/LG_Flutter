@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class HomeButton extends StatelessWidget {
+class HomeSquareButton extends StatelessWidget {
   final IconData icon;
   final String label;
   final VoidCallback onPressed;
 
-  const HomeButton({
+  const HomeSquareButton({
     super.key,
     required this.icon,
     required this.label,

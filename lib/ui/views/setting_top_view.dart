@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:little_guardian/utils/assets_util.dart';
 
 class SettingTopView extends StatelessWidget {
   final double? progressLevel;
@@ -16,7 +15,7 @@ class SettingTopView extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Image.asset(assetRoot('mainIcon')),
+          Image.asset('assets/mainIcon'),
           Text('setting',
             style: TextStyle(
                 fontSize: 10

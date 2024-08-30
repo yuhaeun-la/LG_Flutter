@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:little_guardian/ui/views/setting_top_view.dart';
+import 'package:little_guardian/utils/colors_util.dart';
 
 class ChildProgress2View extends StatefulWidget {
   const ChildProgress2View({super.key});
@@ -20,11 +22,12 @@ class _PinCodeScreenState extends State<ChildProgress2View> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.pink[100],
+      backgroundColor: mainColor,
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
+            SettingTopView(progressLevel: 60),
             const SizedBox(height: 60), // 상단 여백
             const Text(
               'Enter the Code',

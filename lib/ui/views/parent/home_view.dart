@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:little_guardian/ui/views/components//home_button.dart';
+import 'package:little_guardian/ui/views/components/home_square_button.dart';
+import 'package:little_guardian/ui/views/components/wide_toggle_button.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -79,8 +80,8 @@ class HomeView extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    HomeButton(icon: Icons.hearing, label: '주변소리듣기', onPressed: (){}),
-                    HomeButton(icon: Icons.notification_add, label: '알람울리기', onPressed: (){})
+                    HomeSquareButton(icon: Icons.hearing, label: '주변소리듣기', onPressed: (){}),
+                    HomeSquareButton(icon: Icons.notification_add, label: '알람울리기', onPressed: (){})
                   ],
                 ),
               ],
