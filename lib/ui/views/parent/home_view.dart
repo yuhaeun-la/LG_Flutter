@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:little_guardian/ui/views/buttons/home_button.dart';
+import 'package:little_guardian/ui/views/components//home_button.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});

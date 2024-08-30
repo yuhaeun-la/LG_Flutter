@@ -12,7 +12,7 @@ class LandingView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'lib/utils/assets/mainIcon.png',
+              'lib/assets/mainIcon.png',
               width: 100,
               height: 100,
             ),

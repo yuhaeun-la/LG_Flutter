@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:little_guardian/ui/views/buttons/choose_button.dart';
+import 'package:little_guardian/ui/views/components/choose_button.dart';
 
 class ChildProgress1View extends StatelessWidget {
   const ChildProgress1View({super.key});
