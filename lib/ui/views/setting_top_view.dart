@@ -13,16 +13,27 @@ class SettingTopView extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(top: 3), //여기서 의미하는 숫자가 뭔지
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Image.asset('assets/mainIcon.png'),
-          Text('setting',
-            style: TextStyle(
-                fontSize: 10
+          Image.asset(
+            width: 45,
+              height: 45,
+              'assets/mainIcon.png'
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 0),
+            child: Text('setting',
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                  fontSize: 20,
+              ),
             ),
           ),
-          LinearProgressIndicator( //얘는 위젯이라 위젯을 넣어줘야해? 다른 애들은 위젯이 아니야? 
-            value: progressLevel,
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30,5,30,30),
+            child: LinearProgressIndicator(
+              value: progressLevel,
+              color: Colors.black26,
+            ),
           ),
         ],
       ),

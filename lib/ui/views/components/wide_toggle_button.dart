@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:little_guardian/utils/colors_util.dart';
 
 class wideToggleButton extends StatelessWidget {
   final String firstText;
@@ -40,13 +41,13 @@ class wideToggleButton extends StatelessWidget {
             width: 300,
             height: 70,
             decoration: BoxDecoration(
-              color: isSelected ? Colors.redAccent : Colors.white,
-              borderRadius: BorderRadius.circular(50),
+              color: isSelected ? pointColor : Colors.white,
+              borderRadius: BorderRadius.circular(40),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black12,
                   blurRadius: 10,
-                  offset: Offset(0, 5),
+                  offset: Offset(0, 3),
                 ),
               ],
             ),
@@ -54,9 +55,9 @@ class wideToggleButton extends StatelessWidget {
               child: Text(
                 text,
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 21,
                   color: isSelected ? Colors.white : Colors.black,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.normal,
                 ),
               ),
             ),

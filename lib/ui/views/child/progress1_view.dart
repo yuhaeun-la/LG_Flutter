@@ -9,7 +9,6 @@ class ChildProgress1View extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: mainColor, // 배경색 설정
       body: SafeArea(
         child: Column(
           children: [
