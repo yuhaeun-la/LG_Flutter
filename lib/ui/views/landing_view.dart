@@ -26,13 +26,16 @@ class LandingView extends StatelessWidget {
                 fontFamily: 'Roboto',
               ),
             ),
-            Text(
-              'Guardian',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 36,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Roboto',
+            Padding(
+              padding: const EdgeInsets.only(top: 0.3),
+              child: Text(
+                'Guardian',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Roboto',
+                ),
               ),
             ),
           ],

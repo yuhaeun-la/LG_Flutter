@@ -20,7 +20,7 @@ class HomeView extends StatelessWidget {
                   child: Column(
                     children: const [
                       Image(
-                        image: AssetImage('lib/utils/assets/mainIcon.png'),
+                        image: AssetImage('assets/mainIcon.png'),
                         width: 50,
                         height: 50,
                       ),

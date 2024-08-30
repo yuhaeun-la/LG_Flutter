@@ -23,8 +23,7 @@ class _PinCodeScreenState extends State<ChildProgress2View> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: mainColor,
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
+      body: SafeArea(
         child: Column(
           children: [
             SettingTopView(progressLevel: 60),

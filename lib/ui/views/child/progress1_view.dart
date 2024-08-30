@@ -10,10 +10,10 @@ class ChildProgress1View extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: mainColor, // 배경색 설정
-      body: Container(
+      body: SafeArea(
         child: Column(
           children: [
-            SettingTopView(progressLevel: 20),
+            SettingTopView(progressLevel: 0.3),
             Spacer(),
             wideToggleButton(firstText: 'child', secondText: 'parents'),
             Spacer(),

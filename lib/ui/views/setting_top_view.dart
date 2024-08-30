@@ -15,7 +15,7 @@ class SettingTopView extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Image.asset('assets/mainIcon'),
+          Image.asset('assets/mainIcon.png'),
           Text('setting',
             style: TextStyle(
                 fontSize: 10
