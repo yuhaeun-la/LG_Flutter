@@ -69,7 +69,8 @@ class _NumberInputFieldsState extends State<NumberInputFields> {
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 28,
-                fontWeight: FontWeight.normal,
+                fontFamily: 'jalnan',
+                fontWeight: FontWeight.w900,
               ),
               decoration: InputDecoration(
                 counterText: '',

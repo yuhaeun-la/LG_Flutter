@@ -16,20 +16,22 @@ class ChildCard extends StatelessWidget{
           padding: const EdgeInsets.all(16.0),
           child: Row(
             children: [
+              const SizedBox(width: 10),
               const CircleAvatar(
                 radius: 40,
                 backgroundImage:
                 AssetImage('assets/user1.jpg'),
               ),
-              const SizedBox(width: 20),
+              const SizedBox(width: 25),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
+                  SizedBox(height: 10),
                   Text(
                     '김초롱',
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
                   Text('6살'),
@@ -40,6 +42,7 @@ class ChildCard extends StatelessWidget{
                       color: gray1,
                     ),
                   ),
+                  SizedBox(height: 10),
                 ],
               ),
             ],

@@ -17,7 +17,7 @@ class HomeSquareButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 170,
-      height: 100,
+      height: 140,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
@@ -37,15 +37,16 @@ class HomeSquareButton extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                  color: gray1,
+                fontSize: 15
               ),
             ),
             SizedBox(height: 8),
             Container(
               alignment: Alignment.bottomRight,
-              margin: const EdgeInsets.only(top:3),
+              margin: const EdgeInsets.only(top:10),
               child: Icon(
                 icon,
-                size: 30,
+                size: 35,
                 color: gray2,
               ),
             ),

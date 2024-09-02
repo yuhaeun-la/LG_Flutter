@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:little_guardian/core/utils/colors_util.dart';
 
 class SettingTopView extends StatelessWidget {
   final double? progressLevel;
@@ -11,7 +12,7 @@ class SettingTopView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 3),
+      margin: EdgeInsets.only(top: 3), //여기서 의미하는 숫자가 뭔지
       child: Column(
         children: <Widget>[
           Image.asset(
@@ -21,10 +22,11 @@ class SettingTopView extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(0,0.2,0,3),
-            child: Text('setting',
-              textAlign: TextAlign.left,
+            child: Text('settings',
               style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 17,
+                fontWeight: FontWeight.w300,
+                color: gray3
               ),
             ),
           ),
@@ -32,7 +34,8 @@ class SettingTopView extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(30,10,30,30),
             child: LinearProgressIndicator(
               value: progressLevel,
-              color: Colors.black26,
+              color: pointColor,
+              backgroundColor: Colors.white,
             ),
           ),
         ],

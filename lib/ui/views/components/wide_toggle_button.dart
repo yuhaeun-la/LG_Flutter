@@ -50,7 +50,7 @@ class wideToggleButton extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 21,
                   color: isSelected ? Colors.white : Colors.black,
-                  fontWeight: FontWeight.normal,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
             ),
