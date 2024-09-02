@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:little_guardian/core/utils/colors_util.dart';
 import 'package:little_guardian/ui/views/components/home_square_button.dart';
 import 'package:little_guardian/ui/views/components/wide_toggle_button.dart';
+import 'package:little_guardian/ui/views/parent/child_card.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -8,80 +10,53 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.pink[100],
-      body: SafeArea(
-        child: SingleChildScrollView(
+      backgroundColor: mainColor,
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/homeBackground.png"), // 배경 이미지 경로
+            fit: BoxFit.cover, // 이미지를 화면에 맞게 조정
+          ),
+        ),
+        child: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Center(
-                  child: Column(
+                  child: Row(
                     children: const [
-                      Image(
-                        image: AssetImage('assets/mainIcon.png'),
-                        width: 50,
-                        height: 50,
-                      ),
                       SizedBox(height: 10),
-                      Text(
-                        'Little Guardian',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                        child: Text(
+                          'Littles',
+                          style: TextStyle(
+                            fontFamily: 'jalnan',
+                            fontSize: 28,
+                            color: gray2,
+                          ),
                         ),
                       ),
                     ],
                   ),
                 ),
                 const SizedBox(height: 20),
-                Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Row(
-                      children: [
-                        const CircleAvatar(
-                          radius: 40,
-                          backgroundImage:
-                          AssetImage('lib/utils/assets/user1.jpg'),
-                        ),
-                        const SizedBox(width: 20),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              '김초롱',
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Text('6살'),
-                            Text('한빛어린이집'),
-                            Text(
-                              'free use',
-                              style: TextStyle(
-                                fontStyle: FontStyle.italic,
-                                color: Colors.green,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+                ChildCard(),
                 const SizedBox(height: 20),
                 // Buttons for actions
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    HomeSquareButton(icon: Icons.hearing, label: '주변소리듣기', onPressed: (){}),
-                    HomeSquareButton(icon: Icons.notification_add, label: '알람울리기', onPressed: (){})
+                    HomeSquareButton(
+                        icon: Icons.hearing,
+                        label: '주변소리듣기',
+                        onPressed: () {}),
+                    HomeSquareButton(
+                        icon: Icons.notification_add,
+                        label: '알람울리기',
+                        onPressed: () {}),
                   ],
                 ),
               ],

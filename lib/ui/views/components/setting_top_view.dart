@@ -11,7 +11,7 @@ class SettingTopView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 3), //여기서 의미하는 숫자가 뭔지
+      margin: EdgeInsets.only(top: 3),
       child: Column(
         children: <Widget>[
           Image.asset(
@@ -20,7 +20,7 @@ class SettingTopView extends StatelessWidget {
               'assets/mainIcon.png'
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 0),
+            padding: const EdgeInsets.fromLTRB(0,0.2,0,3),
             child: Text('setting',
               textAlign: TextAlign.left,
               style: TextStyle(
@@ -29,7 +29,7 @@ class SettingTopView extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(30,5,30,30),
+            padding: const EdgeInsets.fromLTRB(30,10,30,30),
             child: LinearProgressIndicator(
               value: progressLevel,
               color: Colors.black26,

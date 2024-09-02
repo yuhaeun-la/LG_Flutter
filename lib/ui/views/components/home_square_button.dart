@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:little_guardian/core/utils/colors_util.dart';
 
 class HomeSquareButton extends StatelessWidget {
   final IconData icon;
@@ -17,15 +18,38 @@ class HomeSquareButton extends StatelessWidget {
     return SizedBox(
       width: 170,
       height: 100,
-      child: ElevatedButton.icon(
+      child: ElevatedButton(
         onPressed: onPressed,
-        icon: Icon(icon, size: 30),
-        label: Text(label, textAlign: TextAlign.center),
         style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.white,
+          elevation: 0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(height: 8),
+            Text(
+              label,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                 color: gray1,
+              ),
+            ),
+            SizedBox(height: 8),
+            Container(
+              alignment: Alignment.bottomRight,
+              margin: const EdgeInsets.only(top:3),
+              child: Icon(
+                icon,
+                size: 30,
+                color: gray2,
+              ),
+            ),
+          ],
         ),
       ),
     );
