@@ -58,7 +58,7 @@ class HomeView extends StatelessWidget {
                     HomeSquareButton(
                         icon: Icons.notification_add,
                         label: '알람울리기',
-                        destinationView: EmergencyAlaramView()),
+                        destinationView: EmergencyAlarmView()),
                   ],
                 ),
               ],
