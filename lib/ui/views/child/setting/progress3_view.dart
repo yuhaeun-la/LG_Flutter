@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:little_guardian/ui/views/setting_top_view.dart';
+import 'package:little_guardian/ui/views/components/setting_top_view.dart';
 
 class ChildProgress3View extends StatelessWidget {
   ChildProgress3View({super.key});

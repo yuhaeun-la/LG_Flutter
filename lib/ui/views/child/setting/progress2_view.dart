@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:little_guardian/ui/views/child/progress3_view.dart';
+import 'package:little_guardian/ui/views/child/setting/progress3_view.dart';
 import 'package:little_guardian/ui/views/components/next_page_button.dart';
 import 'package:little_guardian/ui/views/components/number_input_fields.dart';
-import 'package:little_guardian/ui/views/setting_top_view.dart';
+import 'package:little_guardian/ui/views/components/setting_top_view.dart';
 import 'package:little_guardian/core/utils/colors_util.dart';
 
 class ChildProgress2View extends StatelessWidget {

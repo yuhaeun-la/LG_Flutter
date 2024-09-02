@@ -77,17 +77,18 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
+  fonts:
+    - family: NanumSquareNeo  # 폰트 패밀리 이름을 정의합니다.
+      fonts:
+        - asset: assets/fonts/NanumSquareNeo-aLt.ttf  # Light 폰트
+          weight: 300
+        - asset: assets/fonts/NanumSquareNeo-bRg.ttf  # Regular 폰트
+          weight: 400
+        - asset: assets/fonts/NanumSquareNeo-cBd.ttf  # Bold 폰트
+          weight: 700
+        - asset: assets/fonts/NanumSquareNeo-dEb.ttf  # ExtraBold 폰트
+          weight: 800
+        - asset: assets/fonts/NanumSquareNeo-eHv.ttf  # Heavy 폰트
+          weight: 900
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
