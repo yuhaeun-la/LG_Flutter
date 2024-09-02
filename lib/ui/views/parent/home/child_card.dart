@@ -16,13 +16,13 @@ class ChildCard extends StatelessWidget{
           padding: const EdgeInsets.all(16.0),
           child: Row(
             children: [
-              const SizedBox(width: 10),
+              const SizedBox(width: 15),
               const CircleAvatar(
                 radius: 40,
                 backgroundImage:
                 AssetImage('assets/user1.jpg'),
               ),
-              const SizedBox(width: 25),
+              const SizedBox(width: 30),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [

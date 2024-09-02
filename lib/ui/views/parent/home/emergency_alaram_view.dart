@@ -16,18 +16,6 @@ class EmergencyAlarmView extends StatelessWidget {
             // mainAxisAlignment: MainAxisAlignment.,
             children: [
               BackButton(),
-              Image.asset(
-                'assets/mainIcon.png', // 로고 이미지 (로컬 assets 폴더에 저장)
-                height:70.0,
-              ),
-              // Text(
-              //   'ittles',
-              //   style: TextStyle(
-              //     fontFamily: 'jalnan',
-              //     color: gray3,
-              //     fontSize: 24.0,
-              //   ),
-              // ),
               const Spacer(),
             ],
           ),
@@ -61,7 +49,7 @@ class EmergencyAlarmView extends StatelessWidget {
           const Spacer(),
           Image.asset(
             alignment: Alignment.bottomRight,
-            'assets/ballbaby.png',
+            'assets/flowerbaby.png',
             height: 150.0,
           ),
           SizedBox(height: 40.0), // 하단 여백 추가

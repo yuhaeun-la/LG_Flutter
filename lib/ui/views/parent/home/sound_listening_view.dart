@@ -13,21 +13,8 @@ class SoundListeningView extends StatelessWidget {
         children: [
           const SizedBox(height: 60.0), // 상단 여백 추가
               Row(
-                // mainAxisAlignment: MainAxisAlignment.,
                 children: [
                   BackButton(),
-                  Image.asset(
-                    'assets/mainIcon.png', // 로고 이미지 (로컬 assets 폴더에 저장)
-                    height:70.0,
-                  ),
-                  // Text(
-                  //   'ittles',
-                  //   style: TextStyle(
-                  //     fontFamily: 'jalnan',
-                  //     color: gray3,
-                  //     fontSize: 24.0,
-                  //   ),
-                  // ),
                   const Spacer(),
                ],
               ),

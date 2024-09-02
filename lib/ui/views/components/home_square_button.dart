@@ -46,15 +46,19 @@ class HomeSquareButton extends StatelessWidget {
               ),
             ),
             SizedBox(height: 8),
-            Container(
-              alignment: Alignment.bottomRight,
-              margin: const EdgeInsets.only(top: 10),
-              child: Icon(
-                icon,
-                size: 35,
-                color: gray2,
-              ),
-            ),
+            Row(
+              children: [
+                Spacer(),
+                Container(
+                  margin: const EdgeInsets.only(top: 10),
+                  child: Icon(
+                    icon,
+                    size: 50,
+                    color: gray3,
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),

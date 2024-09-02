@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: const HomeView(),
+      debugShowCheckedModeBanner: false,  // 디버그 배너 숨기기
     );
   }
 }
