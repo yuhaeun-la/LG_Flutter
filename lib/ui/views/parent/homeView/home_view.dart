@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:little_guardian/core/utils/colors_util.dart';
 import 'package:little_guardian/ui/views/components/home_square_button.dart';
 import 'package:little_guardian/ui/views/components/wide_toggle_button.dart';
-import 'package:little_guardian/ui/views/parent/child_card.dart';
+import 'package:little_guardian/ui/views/parent/homeView/child_card.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});

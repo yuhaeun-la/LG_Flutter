@@ -1,9 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:little_guardian/ui/views/child/setting/child_progress2_view.dart';
-import 'package:little_guardian/ui/views/parent/home_view.dart';
+import 'package:little_guardian/ui/views/child/setting/child_setting2_view.dart';
+import 'package:little_guardian/ui/views/parent/homeView/home_view.dart';
 import 'package:little_guardian/ui/views/landing_view.dart';
-import 'package:little_guardian/ui/views/child/setting/child_progress1_view.dart';
+import 'package:little_guardian/ui/views/setting1_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           // bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
         ),
       ),
-      home: const ChildProgress1View(),
+      home: const Setting1View(),
     );
   }
 }
