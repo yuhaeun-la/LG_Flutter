@@ -29,7 +29,6 @@ class LandingView extends StatelessWidget {
                 fontFamily: 'jalnan'
               ),
             ),
-
           ],
         ),
       ),
