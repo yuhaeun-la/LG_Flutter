@@ -3,6 +3,8 @@ import 'package:little_guardian/core/utils/colors_util.dart';
 import 'package:little_guardian/ui/views/components/home_square_button.dart';
 import 'package:little_guardian/ui/views/components/wide_toggle_button.dart';
 import 'package:little_guardian/ui/views/parent/home/child_card.dart';
+import 'package:little_guardian/ui/views/parent/home/emergency_alaram_view.dart';
+import 'package:little_guardian/ui/views/parent/home/sound_listening_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -52,11 +54,11 @@ class HomeView extends StatelessWidget {
                     HomeSquareButton(
                         icon: Icons.hearing,
                         label: '주변소리듣기',
-                        onPressed: () {}),
+                        destinationView: SoundListeningView()),
                     HomeSquareButton(
                         icon: Icons.notification_add,
                         label: '알람울리기',
-                        onPressed: () {}),
+                        destinationView: EmergencyAlaramView()),
                   ],
                 ),
               ],

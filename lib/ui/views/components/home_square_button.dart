@@ -4,13 +4,13 @@ import 'package:little_guardian/core/utils/colors_util.dart';
 class HomeSquareButton extends StatelessWidget {
   final IconData icon;
   final String label;
-  final VoidCallback onPressed;
+  final Widget destinationView;
 
   const HomeSquareButton({
     super.key,
     required this.icon,
     required this.label,
-    required this.onPressed,
+    required this.destinationView,
   });
 
   @override
@@ -19,7 +19,12 @@ class HomeSquareButton extends StatelessWidget {
       width: 170,
       height: 140,
       child: ElevatedButton(
-        onPressed: onPressed,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => destinationView),
+          );
+        },
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.white,
           elevation: 0,
@@ -36,14 +41,14 @@ class HomeSquareButton extends StatelessWidget {
               label,
               textAlign: TextAlign.center,
               style: TextStyle(
-                 color: gray1,
-                fontSize: 15
+                color: gray1,
+                fontSize: 15,
               ),
             ),
             SizedBox(height: 8),
             Container(
               alignment: Alignment.bottomRight,
-              margin: const EdgeInsets.only(top:10),
+              margin: const EdgeInsets.only(top: 10),
               child: Icon(
                 icon,
                 size: 35,
