@@ -31,12 +31,11 @@ class HomeSquareButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
-          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 8),
+            SizedBox(height: 30),
             Text(
               label,
               textAlign: TextAlign.center,
@@ -45,18 +44,19 @@ class HomeSquareButton extends StatelessWidget {
                 fontSize: 15,
               ),
             ),
-            SizedBox(height: 8),
+            SizedBox(height: 20),
             Row(
               children: [
                 Spacer(),
                 Container(
-                  margin: const EdgeInsets.only(top: 10),
+                  padding: EdgeInsets.only(left: 70), //Todo:: 왜 80이상 줄 수 없지? 난 그 값을 원하는뎅
                   child: Icon(
                     icon,
                     size: 50,
                     color: gray3,
                   ),
                 ),
+                Spacer(),
               ],
             )
           ],

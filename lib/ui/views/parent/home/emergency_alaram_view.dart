@@ -7,18 +7,23 @@ class EmergencyAlarmView extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+            'Littles',
+          style: TextStyle(
+            fontFamily: 'jalnan',
+            fontSize: 20,
+            color: gray3,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: mainColor, // 배경색 설정
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           const SizedBox(height: 60.0), // 상단 여백 추가
-          Row(
-            // mainAxisAlignment: MainAxisAlignment.,
-            children: [
-              BackButton(),
-              const Spacer(),
-            ],
-          ),
           const Spacer(), // 중간 여백을 균등하게 분배
           // 알림 아이콘과 텍스트
           Column(
@@ -53,7 +58,6 @@ class EmergencyAlarmView extends StatelessWidget {
             height: 150.0,
           ),
           SizedBox(height: 40.0), // 하단 여백 추가
-
         ],
       ),
     );
