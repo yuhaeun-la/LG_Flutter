@@ -1,7 +1,7 @@
-# 🌟 Little Guardiance 🌟
+# Littles
 
 <div align="center">
-  <img width="310" alt="스크린샷 2024-08-12 오전 10 19 14" src="https://github.com/user-attachments/assets/c7c40171-f391-49ec-af3f-ea9b16546819">
+ 
 </div>
 
 <div align="center">
@@ -47,9 +47,9 @@ Little Guardiance를 설치하고 사용하는 방법은 다음과 같습니다:
 
 ## 🎨 앱 화면 미리보기
 
-| 홈 화면 | 소리 듣기 | 카메라 켜기 |
+| 스플래쉬 화면 | 홈 화면 | 소리듣기 |
 |:---:|:---:|:---:|
-| ![홈 화면](path/to/home_screen.png) | ![소리 듣기](path/to/sound_screen.png) | ![카메라 켜기](path/to/camera_screen.png) |
+| ![스플래쉬 뷰](https://github.com/user-attachments/assets/69b7b46e-dbe2-4d91-a95e-e0a1ffc1d7d4) | ![소홈 화면](https://github.com/user-attachments/assets/f76acdae-e729-4fc4-9d7d-73a322d0a4b8) | ![소리듣기](https://github.com/user-attachments/assets/4578fdad-8767-4164-be3a-08ec72a2146e) |
 
 <br>현재 화면이 보이지 않는게 맞습니다
 
