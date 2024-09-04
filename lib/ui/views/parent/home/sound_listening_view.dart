@@ -69,7 +69,7 @@ class _SoundListeningViewState extends State<SoundListeningView> {
               ),
               SizedBox(height: 20.0),
               Text(
-                isListening ? '주변 소리를 듣습니다' : '소리를 듣지 않습니다',
+                isListening ? '아이의 주변 소리를 듣는 중 ' : '아이의 주변소리를 듣지 않는 중',
                 style: TextStyle(
                   fontSize: 15.0,
                   fontFamily: 'NanumSquareNeo',
