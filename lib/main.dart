@@ -5,7 +5,7 @@ import 'package:little_guardian/ui/views/components/practice_button.dart';
 import 'package:little_guardian/ui/views/parent/home/home_view.dart';
 import 'package:little_guardian/ui/views/landing_view.dart';
 import 'package:little_guardian/ui/views/parent/setting/parent_setting3_view.dart';
-import 'package:little_guardian/ui/views/parent/setting/setting1_view.dart';
+import 'package:little_guardian/ui/views/components/setting1_view.dart';
 
 void main() {
   runApp(const MyApp());
