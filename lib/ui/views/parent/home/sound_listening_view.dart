@@ -1,11 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:little_guardian/core/utils/colors_util.dart';
+import 'package:lottie/lottie.dart';
 
-class SoundListeningView extends StatelessWidget {
+class SoundListeningView extends StatefulWidget {
+  @override
+  _SoundListeningViewState createState() => _SoundListeningViewState();
+}
+
+class _SoundListeningViewState extends State<SoundListeningView> {
+  bool isListening = false;
+
+  void toggleListening() {
+    setState(() {
+      isListening = !isListening;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -23,30 +35,45 @@ class SoundListeningView extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const SizedBox(height: 60.0), // 상단 여백 추가
-          const Spacer(), // 중간 여백을 균등하게 분배
-          // 알림 아이콘과 텍스트
+          const SizedBox(height: 60.0),
+          const Spacer(),
           Column(
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  shape: BoxShape.circle,
-                ),
-                padding: EdgeInsets.all(40.0),
-                child: Icon(
-                  Icons.hearing,
-                  size: 50.0,
-                  color: pointColor,// 아이콘 색상
+              GestureDetector(
+                onTap: toggleListening, //
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    isListening? 
+                    Lottie.asset(
+                      'assets/lottie/listening.json',
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                    ) :
+                    Image.asset('assets/listen.png')
+                    ,
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle,
+                      ),
+                      padding: EdgeInsets.all(40.0),
+                      child: Icon(
+                        isListening ? Icons.hearing : Icons.hearing_disabled,
+                        size: 50.0,
+                        color: pointColor,
+                      ),
+                    ),
+                  ],
                 ),
               ),
               SizedBox(height: 20.0),
               Text(
-                '주변 소리를 듣습니다',
+                isListening ? '주변 소리를 듣습니다' : '소리를 듣지 않습니다',
                 style: TextStyle(
                   fontSize: 15.0,
                   fontFamily: 'NanumSquareNeo',
-                  color: pointColor2, // 텍스트 색상
+                  color: pointColor2,
                 ),
               ),
             ],

@@ -63,11 +63,16 @@ flutter:
     - assets/mainIcon.png
     - assets/user1.jpg
     - assets/child.png
+    - assets/listen.png
     - assets/homeBackground.png
     - assets/congrats.png
     - assets/flowerbaby.png
     - assets/ballbaby.png
     - assets/finish-line.png
+  #Lottie
+    - assets/lottie/listening.json
+    - assets/lottie/warning.json
+    - assets/lottie/listeningBackground.json
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
