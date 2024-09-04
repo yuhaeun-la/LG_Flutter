@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:little_guardian/core/utils/colors_util.dart';
 import 'package:little_guardian/ui/views/child/home/child_home_view.dart';
 import 'package:little_guardian/ui/views/components/next_page_button.dart';
+import 'package:little_guardian/ui/views/components/setting_text.dart';
 import 'package:little_guardian/ui/views/components/setting_top_view.dart';
+import 'package:little_guardian/ui/views/parent/home/home_view.dart';
+import 'package:little_guardian/ui/views/parent/setting/setting1_view.dart';
 
 class ChildFinishedSettingView extends StatelessWidget {
   ChildFinishedSettingView({super.key});
@@ -27,7 +30,8 @@ class ChildFinishedSettingView extends StatelessWidget {
             fit: BoxFit.contain,        // 이미지를 주어진 크기에 맞추기
           ),
             Spacer(),
-            NextPageButton(targetPage: ChildHomeView()),
+            SettingText(settingText: '세팅이 끝났습니다'),
+            NextPageButton(targetPage: HomeView()),
             Spacer(),
           ],
         ),

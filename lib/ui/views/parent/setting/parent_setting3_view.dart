@@ -47,7 +47,7 @@ class ParentSetting3View extends StatelessWidget {
               ),
               SizedBox(height: 40.0),
               Text(
-                '1. Enter the pairing Code on the Child Device\n2. Keep this Screen open while you do this',
+                '1. Enter the pairing Code on the Child Device\n 2. Keep this Screen open while you do this',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 16.0,

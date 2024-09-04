@@ -17,7 +17,7 @@ class NextPageButton extends StatelessWidget {
             MaterialPageRoute(builder: (context) => targetPage)
         );
       },
-      iconSize: 100,
+      iconSize: 200,
     );
   }
 }

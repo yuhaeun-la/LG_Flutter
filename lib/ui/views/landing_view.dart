@@ -9,27 +9,31 @@ class LandingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: pointColor,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // Image.asset(
-            //   'assets/mainIcon.png',
-            //   width: 100,
-            //   height: 100,
-            // ),
-            const SizedBox(height: 5),
-            const Text(
-              'Littles',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 55,
-                color: gray2,
-                fontWeight: FontWeight.w900,
-                fontFamily: 'jalnan'
-              ),
+      body: Container(
+        child: GestureDetector(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Image.asset(
+                //   'assets/mainIcon.png',
+                //   width: 100,
+                //   height: 100,
+                // ),
+                const SizedBox(height: 5),
+                const Text(
+                  'Littles',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 55,
+                    color: gray2,
+                    fontWeight: FontWeight.w900,
+                    fontFamily: 'jalnan'
+                  ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
