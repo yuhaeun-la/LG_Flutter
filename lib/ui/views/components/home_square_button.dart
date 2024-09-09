@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:little_guardian/core/utils/colors_util.dart';
+import 'package:little_guardian/ui/style/colors_util.dart';
 
 class HomeSquareButton extends StatelessWidget {
   final IconData icon;
@@ -47,16 +47,14 @@ class HomeSquareButton extends StatelessWidget {
             SizedBox(height: 20),
             Row(
               children: [
-                Spacer(),
                 Container(
-                  padding: EdgeInsets.only(left: 70), //Todo:: 왜 80이상 줄 수 없지? 난 그 값을 원하는뎅
+                  padding: EdgeInsets.only(left: 70),
                   child: Icon(
                     icon,
                     size: 50,
                     color: gray3,
                   ),
                 ),
-                Spacer(),
               ],
             )
           ],

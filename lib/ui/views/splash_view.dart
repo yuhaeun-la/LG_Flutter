@@ -1,9 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:little_guardian/core/utils/colors_util.dart';
+import 'package:little_guardian/ui/style/colors_util.dart';
 
-class LandingView extends StatelessWidget {
-  const LandingView({super.key});
+class Splash_view extends StatelessWidget {
+  const Splash_view({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:little_guardian/core/utils/colors_util.dart';
+import 'package:little_guardian/ui/style/colors_util.dart';
 import 'package:little_guardian/ui/views/child/home/child_home_view.dart';
 import 'package:little_guardian/ui/views/components/next_page_button.dart';
 import 'package:little_guardian/ui/views/components/setting_text.dart';

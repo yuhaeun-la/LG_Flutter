@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:little_guardian/core/utils/colors_util.dart';
+import 'package:little_guardian/ui/style/colors_util.dart';
 
 class EmergencyAlarmView extends StatefulWidget {
   @override
   _EmergencyAlarmViewState createState() => _EmergencyAlarmViewState();
 }
 
+// TODO: 코드 정리
 class _EmergencyAlarmViewState extends State<EmergencyAlarmView> with SingleTickerProviderStateMixin {
   bool isRinging = false; // 상태: 종이 울리고 있는지 여부
   late AnimationController _controller;
@@ -16,9 +17,8 @@ class _EmergencyAlarmViewState extends State<EmergencyAlarmView> with SingleTick
   void initState() {
     super.initState();
 
-    // AnimationController 설정 (0.2초로 빠르게 설정)
     _controller = AnimationController(
-      duration: const Duration(milliseconds: 200), // 빠른 속도로 애니메이션 설정
+      duration: const Duration(milliseconds: 200),
       vsync: this,
     );
 
@@ -67,7 +67,6 @@ class _EmergencyAlarmViewState extends State<EmergencyAlarmView> with SingleTick
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const SizedBox(height: 60.0),
           const Spacer(),
           Column(
             children: [
@@ -77,26 +76,7 @@ class _EmergencyAlarmViewState extends State<EmergencyAlarmView> with SingleTick
                   alignment: Alignment.center,
                   children: [
                     // 중앙의 아이콘 (색상 및 회전 애니메이션 적용)
-                    AnimatedBuilder(
-                      animation: _controller,
-                      builder: (context, child) {
-                        return Transform.rotate(
-                          angle: isRinging ? _rotationAnimation.value : 0, // 아이콘 흔들림
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white,// 색상 애니메이션 적용 (흰색 -> 빨간색)
-                              shape: BoxShape.circle,
-                            ),
-                            padding: EdgeInsets.all(40.0),
-                            child: Icon(
-                              isRinging ? Icons.notifications_active : Icons.notifications_off, // 아이콘 변경
-                              size: 50.0,
-                              color: isRinging? _colorAnimation.value : pointColor, // 아이콘 색상
-                            ),
-                          ),
-                        );
-                      },
-                    ),
+                    buildAnimatedBuilder(),
                   ],
                 ),
               ),
@@ -117,9 +97,31 @@ class _EmergencyAlarmViewState extends State<EmergencyAlarmView> with SingleTick
             'assets/ballbaby.png',
             height: 150.0,
           ),
-          SizedBox(height: 40.0), // 하단 여백 추가
         ],
       ),
     );
+  }
+
+  AnimatedBuilder buildAnimatedBuilder() {
+    return AnimatedBuilder(
+                    animation: _controller,
+                    builder: (context, child) {
+                      return Transform.rotate(
+                        angle: isRinging ? _rotationAnimation.value : 0, // 아이콘 흔들림
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,// 색상 애니메이션 적용 (흰색 -> 빨간색)
+                            shape: BoxShape.circle,
+                          ),
+                          padding: EdgeInsets.all(40.0),
+                          child: Icon(
+                            isRinging ? Icons.notifications_active : Icons.notifications_off, // 아이콘 변경
+                            size: 50.0,
+                            color: isRinging? _colorAnimation.value : pointColor, // 아이콘 색상
+                          ),
+                        ),
+                      );
+                    },
+                  );
   }
 }

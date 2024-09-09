@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:little_guardian/core/utils/colors_util.dart';
+import 'package:little_guardian/ui/style/colors_util.dart';
 
 class SettingTopView extends StatelessWidget {
   final double? progressLevel;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:little_guardian/core/utils/colors_util.dart';
+import 'package:little_guardian/ui/style/colors_util.dart';
 import 'package:little_guardian/ui/views/components/next_page_button.dart';
 import 'package:little_guardian/ui/views/parent/setting/parent_setting3_view.dart';
 
