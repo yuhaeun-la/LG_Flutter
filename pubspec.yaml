@@ -1,101 +1,61 @@
 name: little_guardian
 description: "A new Flutter project."
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-# The following defines the version and build number for your application.
-# A version number is three numbers separated by dots, like 1.2.43
-# followed by an optional build number separated by a +.
-# Both the version and the builder number may be overridden in flutter
-# build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
-# Read more about iOS versioning at
-# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-# In Windows, build-name is used as the major, minor, and patch parts
-# of the product and file versions while build-number is used as the build suffix.
+publish_to: 'none'
+
 version: 1.0.0+1
 
 environment:
   sdk: '>=3.4.4 <4.0.0'
 
-# Dependencies specify other packages that your package needs in order to work.
-# To automatically upgrade your package dependencies to the latest versions
-# consider running `flutter pub upgrade --major-versions`. Alternatively,
-# dependencies can be manually updated by changing the version numbers below to
-# the latest version available on pub.dev. To see which dependencies have newer
-# versions available, run `flutter pub outdated`.
+# 주요 패키지 종속성 (dependencies)
 dependencies:
   flutter:
     sdk: flutter
+  cupertino_icons: ^1.0.6  # Cupertino 스타일 아이콘
+  image_picker: ^1.1.2  # 이미지 선택기 (카메라/갤러리)
+  flutter_webrtc: ^0.11.7  # WebRTC 지원
+  lottie: ^3.1.2  # Lottie 애니메이션 지원
+  flutter_native_splash: ^2.4.1
 
-  # sdk
-  cupertino_icons: ^1.0.6
-  image_picker: ^1.1.2
-  flutter_webrtc: ^0.11.7
-
-  #third_party
-  lottie: ^3.1.2
-
-
+# 개발 관련 패키지 종속성 (dev_dependencies)
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^3.0.0  # 코드 스타일 권장사항 (lint)
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
-  flutter_lints: ^3.0.0
+flutter_native_splash:
+  color: "#9dc0e3"  # 스플래시 화면의 배경색 (hex 코드로 지정)
+  image: assets/splashIcon.png  # 스플래시 화면의 이미지 경로
+  android: true  # Android 스플래시 화면 적용
+  ios: true  # iOS 스플래시 화면 적용
+  fullscreen: true  # 화면을 가득 채우는 스플래시 화면
+  android_gravity: center  # 스플래시 이미지 위치 설정
+  ios_content_mode: center  # iOS에서 스플래시 이미지 위치 설정
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter packages.
+# Flutter 앱 설정
 flutter:
+  uses-material-design: true  # Material Icons 사용
 
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
-  uses-material-design: true
+  # 애셋 설정 (assets)
   assets:
-    - assets/
-  #Lottie
-    - assets/lottie/
-  # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+    - assets/  # 기본 애셋 디렉토리
+    - assets/lottie/  # Lottie 애니메이션 파일 디렉토리
 
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware
-
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/assets-and-images/#from-packages
-
-  # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
+  # 폰트 설정 (fonts)
   fonts:
-    - family: NanumSquareNeo  # 폰트 패밀리 이름을 정의합니다.
+    - family: NanumSquareNeo  # 폰트 패밀리: NanumSquareNeo
       fonts:
-        - asset: assets/fonts/NanumSquareNeo-aLt.ttf  # Light 폰트
-          weight: 300
-        - asset: assets/fonts/NanumSquareNeo-bRg.ttf  # Regular 폰트
-          weight: 400
-        - asset: assets/fonts/NanumSquareNeo-cBd.ttf  # Bold 폰트
-          weight: 700
-        - asset: assets/fonts/NanumSquareNeo-dEb.ttf  # ExtraBold 폰트
-          weight: 800
-        - asset: assets/fonts/NanumSquareNeo-eHv.ttf  # Heavy 폰트
-          weight: 900
-    - family: jalnan  # 폰트 패밀리 이름을 정의합니다.
+        - asset: assets/fonts/NanumSquareNeo-aLt.ttf
+          weight: 300  # Light
+        - asset: assets/fonts/NanumSquareNeo-bRg.ttf
+          weight: 400  # Regular
+        - asset: assets/fonts/NanumSquareNeo-cBd.ttf
+          weight: 700  # Bold
+        - asset: assets/fonts/NanumSquareNeo-dEb.ttf
+          weight: 800  # ExtraBold
+        - asset: assets/fonts/NanumSquareNeo-eHv.ttf
+          weight: 900  # Heavy
+    - family: jalnan  # 폰트 패밀리: jalnan
       fonts:
-        - asset: assets/fonts/Jalnan2TTF.ttf  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
+        - asset: assets/fonts/Jalnan2TTF.ttf
