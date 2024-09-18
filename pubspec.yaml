@@ -12,26 +12,31 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.6  # Cupertino 스타일 아이콘
-  image_picker: ^1.1.2  # 이미지 선택기 (카메라/갤러리)
+
+  cupertino_icons: ^1.0.6
+  image_picker: ^1.1.2
   flutter_webrtc: ^0.11.7  # WebRTC 지원
   lottie: ^3.1.2  # Lottie 애니메이션 지원
   flutter_native_splash: ^2.4.1
+
+  # 파이어 베이스 관련
+  firebase_core: ^3.5.0
+  cloud_firestore: ^5.4.2
 
 # 개발 관련 패키지 종속성 (dev_dependencies)
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0  # 코드 스타일 권장사항 (lint)
+  flutter_lints: ^3.0.0
 
 flutter_native_splash:
-  color: "#9dc0e3"  # 스플래시 화면의 배경색 (hex 코드로 지정)
-  image: assets/splashIcon.png  # 스플래시 화면의 이미지 경로
-  android: true  # Android 스플래시 화면 적용
-  ios: true  # iOS 스플래시 화면 적용
-  fullscreen: true  # 화면을 가득 채우는 스플래시 화면
-  android_gravity: center  # 스플래시 이미지 위치 설정
-  ios_content_mode: center  # iOS에서 스플래시 이미지 위치 설정
+  color: "#9dc0e3"
+  image: assets/splashIcon.png
+  android: true
+  ios: true
+  fullscreen: true
+  android_gravity: center
+  ios_content_mode: center
 
 # Flutter 앱 설정
 flutter:
@@ -41,6 +46,7 @@ flutter:
   assets:
     - assets/  # 기본 애셋 디렉토리
     - assets/lottie/  # Lottie 애니메이션 파일 디렉토리
+    - assets/image/
 
   # 폰트 설정 (fonts)
   fonts:
