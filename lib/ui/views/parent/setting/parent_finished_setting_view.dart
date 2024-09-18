@@ -21,7 +21,7 @@ class ParentFinishedSettingView extends StatelessWidget {
             SettingTopView(progressLevel: 1.0),
             Spacer(),
             Image.asset(
-              'assets/finish-line.png',
+              'assets/image/finish-line.png',
               width: screenWidth * 0.7,   // 화면 너비의 70%
               height: screenHeight * 0.4, // 화면 높이의 40%
               fit: BoxFit.contain,        // 이미지를 주어진 크기에 맞추기

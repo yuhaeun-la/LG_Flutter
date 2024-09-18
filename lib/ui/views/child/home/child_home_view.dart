@@ -18,7 +18,7 @@ class ChildHomeView extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/homeBackground.png"),
+            image: AssetImage("assets/image/homeBackground.png"),
             fit: BoxFit.cover,
           ),
         ),

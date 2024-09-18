@@ -94,7 +94,7 @@ class _EmergencyAlarmViewState extends State<EmergencyAlarmView> with SingleTick
           const Spacer(),
           Image.asset(
             alignment: Alignment.bottomRight,
-            'assets/ballbaby.png',
+            'assets/image/ballbaby.png',
             height: 150.0,
           ),
         ],

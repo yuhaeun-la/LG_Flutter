@@ -51,7 +51,7 @@ class _SoundListeningViewState extends State<SoundListeningView> {
                       width: double.infinity,
                       fit: BoxFit.cover,
                     ) :
-                    Image.asset('assets/listen.png')
+                    Image.asset('assets/image/listen.png')
                     ,
                     Container(
                       decoration: BoxDecoration(
@@ -82,7 +82,7 @@ class _SoundListeningViewState extends State<SoundListeningView> {
           const Spacer(),
           Image.asset(
             alignment: Alignment.bottomRight,
-            'assets/ballbaby.png',
+            'assets/image/ballbaby.png',
             height: 150.0,
           ),
           SizedBox(height: 40.0), // 하단 여백 추가

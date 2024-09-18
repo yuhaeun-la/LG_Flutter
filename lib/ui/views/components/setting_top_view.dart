@@ -18,7 +18,7 @@ class SettingTopView extends StatelessWidget {
           Image.asset(
             width: 45,
               height: 45,
-              'assets/mainIcon.png'
+              'assets/image/mainIcon.png'
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(0,0.2,0,3),

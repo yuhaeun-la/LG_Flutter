@@ -20,7 +20,7 @@ class ChildCard extends StatelessWidget{
               const CircleAvatar(
                 radius: 40,
                 backgroundImage:
-                AssetImage('assets/user1.jpg'),
+                AssetImage('assets/image/user1.jpg'),
               ),
               const SizedBox(width: 30),
               Column(
