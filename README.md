@@ -5,8 +5,10 @@
 </div>
 
 <div align="center">
+ 
   <strong>Little Guardiance</strong>는 아이들의 안전을 최우선으로 생각하는 부모님들을 위한 앱입니다. <br> 
   Flutter로 개발되었으며, 부모님들이 아이들의 스마트폰을 원격으로 모니터링하고 보호할 수 있도록 돕습니다.
+  
 </div>
 
 
@@ -51,7 +53,6 @@ Little Guardiance를 설치하고 사용하는 방법은 다음과 같습니다:
 |:---:|:---:|:---:|
 | ![스플래쉬 뷰](https://github.com/user-attachments/assets/69b7b46e-dbe2-4d91-a95e-e0a1ffc1d7d4) | ![소홈 화면](https://github.com/user-attachments/assets/f76acdae-e729-4fc4-9d7d-73a322d0a4b8) | ![소리듣기](https://github.com/user-attachments/assets/4578fdad-8767-4164-be3a-08ec72a2146e) |
 
-<br>현재 화면이 보이지 않는게 맞습니다
 
 ---
 
