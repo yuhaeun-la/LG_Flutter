@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart'; // Firebase Core 패키지 임포트
-import 'firebase_options.dart'; // Firebase 옵션 임포트
-import 'package:little_guardian/ui/views/parent/setting/setting1_view.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'package:provider/provider.dart';
+import 'di/di.dart';
+import 'package:little_guardian/ui/views/parent/home/sound_listening_view.dart';
+import 'package:little_guardian/viewmodels/sound_listening_viewmodel.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized(); // 위젯 시스템 초기화
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform, // Firebase 초기화
+    options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  setupDI(); // DI 설정 호출
+
   runApp(const MyApp());
 }
 
@@ -16,12 +22,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        fontFamily: 'NanumSquareNeo',
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => getIt<SoundListeningViewModel>(), // DI를 통해 ViewModel 주입
+        ),
+      ],
+      child: MaterialApp(
+        theme: ThemeData(
+          fontFamily: 'NanumSquareNeo',
+        ),
+        home: const SoundListeningView(),
+        debugShowCheckedModeBanner: false,
       ),
-      home: const Setting1View(),
-      debugShowCheckedModeBanner: false,  // 디버그 배너 숨기기
     );
   }
 }

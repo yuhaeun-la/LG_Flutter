@@ -33,7 +33,10 @@ class WebRTCConnectionRepositoryImpl implements WebRTCConnectionRepository {
 
     // Firebase에서 offer 정보 가져오기
     final offerData = await _firebaseManager.readSDP(sessionId);
-    RTCSessionDescription offer = RTCSessionDescription(offerData['sdp'], 'offer');
+    RTCSessionDescription offer = RTCSessionDescription(
+        offerData['sdp'],
+        'offer'
+    );
     await _peerConnection!.setRemoteDescription(offer);
 
     // Answer 생성 및 저장
@@ -47,7 +50,10 @@ class WebRTCConnectionRepositoryImpl implements WebRTCConnectionRepository {
   @override
   Future<void> setRemoteDescription(String sessionId) async {
     final sdpData = await _firebaseManager.readSDP(sessionId);
-    RTCSessionDescription description = RTCSessionDescription(sdpData['sdp'], sdpData['type']);
+    RTCSessionDescription description = RTCSessionDescription(
+        sdpData['sdp'],
+        sdpData['type']
+    );
     await _peerConnection?.setRemoteDescription(description);
   }
 

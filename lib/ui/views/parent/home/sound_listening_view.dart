@@ -1,26 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:little_guardian/viewmodels/sound_listening_viewmodel.dart';
 import 'package:little_guardian/ui/style/colors_util.dart';
 import 'package:lottie/lottie.dart';
 
-class SoundListeningView extends StatefulWidget {
-  const SoundListeningView({super.key});
-
-
-  @override
-  _SoundListeningViewState createState() => _SoundListeningViewState();
-}
-
-class _SoundListeningViewState extends State<SoundListeningView> {
-  bool isListening = false;
-
-  void toggleListening() {
-    setState(() {
-      isListening = !isListening;
-    });
-  }
+class SoundListeningView extends StatelessWidget {
+  const SoundListeningView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final viewModel = context.watch<SoundListeningViewModel>();
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -33,8 +23,9 @@ class _SoundListeningViewState extends State<SoundListeningView> {
         ),
         centerTitle: true,
         backgroundColor: Colors.transparent,
+        elevation: 0,
       ),
-      backgroundColor: mainColor, // 배경색 설정
+      backgroundColor: mainColor,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -43,18 +34,19 @@ class _SoundListeningViewState extends State<SoundListeningView> {
           Column(
             children: [
               GestureDetector(
-                onTap: toggleListening, //
+                onTap: () {
+                  viewModel.toggleListening(); // ViewModel의 toggleListening 호출
+                },
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
-                    isListening? 
-                    Lottie.asset(
+                    viewModel.isListening
+                        ? Lottie.asset(
                       'assets/lottie/listening.json',
                       width: double.infinity,
                       fit: BoxFit.cover,
-                    ) :
-                    Image.asset('assets/image/listen.png')
-                    ,
+                    )
+                        : Image.asset('assets/image/listen.png'),
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -62,7 +54,9 @@ class _SoundListeningViewState extends State<SoundListeningView> {
                       ),
                       padding: EdgeInsets.all(40.0),
                       child: Icon(
-                        isListening ? Icons.hearing : Icons.hearing_disabled,
+                        viewModel.isListening
+                            ? Icons.hearing
+                            : Icons.hearing_disabled,
                         size: 50.0,
                         color: pointColor,
                       ),
@@ -70,9 +64,11 @@ class _SoundListeningViewState extends State<SoundListeningView> {
                   ],
                 ),
               ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               Text(
-                isListening ? '아이의 주변 소리를 듣는 중 ' : '아이의 주변소리를 듣지 않는 중',
+                viewModel.isListening
+                    ? '아이의 주변 소리를 듣는 중 '
+                    : '아이의 주변소리를 듣지 않는 중',
                 style: TextStyle(
                   fontSize: 15.0,
                   fontFamily: 'NanumSquareNeo',
@@ -83,11 +79,11 @@ class _SoundListeningViewState extends State<SoundListeningView> {
           ),
           const Spacer(),
           Image.asset(
-            alignment: Alignment.bottomRight,
             'assets/image/ballbaby.png',
             height: 150.0,
+            alignment: Alignment.bottomRight,
           ),
-          SizedBox(height: 40.0), // 하단 여백 추가
+          const SizedBox(height: 40.0),
         ],
       ),
     );

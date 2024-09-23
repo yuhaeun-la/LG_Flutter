@@ -9,23 +9,18 @@ class SoundListeningViewModel extends ChangeNotifier {
   bool _isListening = false;
   bool get isListening => _isListening;
 
-  // 페어링 안 시키기 위해
-  String _sessionId = "hardcodedSessionId"; // 세션 ID 하드코딩
-  bool _isParent = true; // true: 부모, false: 자녀
-  bool get isParent => _isParent;
-
-  void setRole(bool isParent) {
-    _isParent = isParent;
+  void toggleListening() {
+    _isListening = !_isListening;
     notifyListeners();
+
+    if (_isListening) {
+      startListening();
+    }
   }
 
   Future<void> startListening() async {
     try {
-      _isListening = true;
-      notifyListeners();
-
       await _listenToAudioUseCase.execute(_sessionId, _isParent);
-
       _isListening = false;
       notifyListeners();
     } catch (e) {
@@ -33,5 +28,14 @@ class SoundListeningViewModel extends ChangeNotifier {
       notifyListeners();
       throw e;
     }
+  }
+
+  // 역할 변경을 위한 메서드 추가
+  bool _isParent = true;
+  String _sessionId = "hardcodedSessionId";
+
+  void setRole(bool isParent) {
+    _isParent = isParent;
+    notifyListeners();
   }
 }
