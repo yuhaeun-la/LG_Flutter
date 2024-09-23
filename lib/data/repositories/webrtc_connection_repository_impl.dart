@@ -1,6 +1,6 @@
 import 'package:flutter_webrtc/flutter_webrtc.dart';
+import 'package:little_guardian/data/datasources/firebase_manager.dart';
 import 'package:little_guardian/domain/repository/webrtc_connection_repository_impl.dart';
-import '../datasources/firebase_manager.dart';
 
 class WebRTCConnectionRepositoryImpl implements WebRTCConnectionRepository {
   final FirebaseManager _firebaseManager;
