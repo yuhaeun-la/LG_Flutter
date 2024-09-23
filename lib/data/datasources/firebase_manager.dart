@@ -5,7 +5,7 @@ import 'package:little_guardian/domain/model/parininginfo.dart';
 class FirebaseManager {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  // *** WebRTC 관련 기능 ***
+  // WebRTC 관련 기능
 
   // SDP 저장
   Future<void> saveSDP(String sessionId, String sdp, String type) async {
@@ -30,7 +30,7 @@ class FirebaseManager {
     return _firestore.collection('sessions').doc(sessionId).collection('iceCandidates').snapshots();
   }
 
-  // *** 페어링 관련 기능 ***
+  // 페어링 관련 기능
 
   // 페어링 정보 저장
   Future<void> savePairing(PairingInfo pairingInfo) async {
@@ -46,7 +46,7 @@ class FirebaseManager {
     return null;
   }
 
-  // *** 유저 정보 관련 기능 ***
+  // 유저 정보 관련 기능
 
   // User 정보 저장 (Create/Update)
   Future<void> saveUser(Map<String, dynamic> userData) async {

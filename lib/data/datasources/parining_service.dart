@@ -1,42 +1,58 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:flutter_webrtc/flutter_webrtc.dart';
+// import 'package:little_guardian/data/datasources/firebase_manager.dart';
+//
+// class WebRTCService {
+//   final FirebaseManager _firebaseManager = FirebaseManager();
+//   RTCPeerConnection? _peerConnection;
+//   MediaStream? _localStream;
+//
+//   // PeerConnection 생성 및 오디오 스트림 시작
+//   Future<void> createPeerConnection(String sessionId) async {
+//     _peerConnection = await createPeerConnection({
+//       'iceServers': [
+//         {'urls': 'stun:stun.l.google.com:19302'}
+//       ]
+//     });
+//
+//     // 오디오 스트림 생성
+//     _localStream = await navigator.mediaDevices.getUserMedia({'audio': true});
+//     _localStream?.getTracks().forEach((track) {
+//       _peerConnection?.addTrack(track, _localStream!);
+//     });
+//
+//     // Offer 생성 및 저장
+//     RTCSessionDescription offer = await _peerConnection!.createOffer();
+//     await _peerConnection!.setLocalDescription(offer);
+//     await _firebaseManager.saveSDP(sessionId, offer.sdp, 'offer');
+//
+//     // ICE 후보자 생성 시 Firebase에 저장
+//     _peerConnection!.onIceCandidate = (RTCIceCandidate candidate) {
+//       _firebaseManager.saveIceCandidate(sessionId, {
+//         'candidate': candidate.candidate,
+//         'sdpMid': candidate.sdpMid,
+//         'sdpMlineIndex': candidate.sdpMlineIndex,
+//       });
+//     };
+//   }
+//
+//   // Remote Description 설정 (Answer 수신)
+//   Future<void> setRemoteDescription(String sessionId) async {
+//     var sdpData = await _firebaseManager.readSDP(sessionId);
+//     RTCSessionDescription description = RTCSessionDescription(sdpData['sdp'], sdpData['type']);
+//     await _peerConnection?.setRemoteDescription(description);
+//   }
+//
+//   // ICE 후보자 추가
+//   Future<void> addIceCandidate(RTCIceCandidate candidate) async {
+//     await _peerConnection?.addCandidate(candidate);
+//   }
+//
+//   // 종료 및 정리
+//   Future<void> dispose() async {
+//     await _localStream?.dispose();
+//     await _peerConnection?.close();
+//     _peerConnection = null;
+//     _localStream = null;
+//   }
+// }
 
-class FirebaseManager {
-  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-
-  // SDP 저장
-  Future<void> saveSDP(String sessionId, String sdp, String type) async {
-    await _firestore.collection('sessions').doc(sessionId).set({
-      'sdp': sdp,
-      'type': type,
-    });
-  }
-
-  // SDP 가져오기
-  Future<DocumentSnapshot> readSDP(String sessionId) async {
-    return await _firestore.collection('sessions').doc(sessionId).get();
-  }
-
-  // ICE 후보자 저장
-  Future<void> saveIceCandidate(String sessionId, Map<String, dynamic> candidateData) async {
-    await _firestore.collection('sessions').doc(sessionId).collection('iceCandidates').add(candidateData);
-  }
-
-  // ICE 후보자 가져오기
-  Stream<QuerySnapshot> getIceCandidates(String sessionId) {
-    return _firestore.collection('sessions').doc(sessionId).collection('iceCandidates').snapshots();
-  }
-
-  // // 페어링 정보 저장
-  // Future<void> savePairing(PairingInfo pairingInfo) async {
-  //   await _firestore.collection('pairings').doc(pairingInfo.pairingCode).set(pairingInfo.toMap());
-  // }
-  //
-  // // 페어링 정보 가져오기
-  // Future<PairingInfo?> getPairingByCode(String pairingCode) async {
-  //   final doc = await _firestore.collection('pairings').doc(pairingCode).get();
-  //   if (doc.exists) {
-  //     return PairingInfo.fromMap(doc.data()!);
-  //   }
-  //   return null;
-  // }
-}
