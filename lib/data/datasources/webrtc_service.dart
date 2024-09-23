@@ -6,13 +6,18 @@ class WebRTCService {
   RTCPeerConnection? _peerConnection;
   MediaStream? _localStream;
 
-  // PeerConnection 생성 및 오디오 스트림 시작
-  Future<void> createPeerConnection(String sessionId) async {
-    _peerConnection = await createPeerConnection({
-      'iceServers': [
-        {'urls': 'stun:stun.l.google.com:19302'}
-      ]
-    });
+// PeerConnection 생성 및 오디오 스트림 시작
+  Future<void> initializePeerConnection(String sessionId) async {
+    // WebRTC의 createPeerConnection을 호출
+    _peerConnection = await createPeerConnection(
+      {
+        'iceServers': [
+          {
+            'urls': ['stun:stun.l.google.com:19302'] // STUN 서버 설정
+          }
+        ]
+      },
+    );
 
     // 오디오 스트림 생성
     _localStream = await navigator.mediaDevices.getUserMedia({'audio': true});
