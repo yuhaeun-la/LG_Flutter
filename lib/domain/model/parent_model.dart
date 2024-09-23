@@ -1,9 +1,9 @@
 class Parent {
   final String id;
   final String name;
-  final List<String> childrenIds; // 페어링된 자식들 ID 목록
-  final bool isPaired;            // 페어링 상태
-  final DateTime? pairedAt;       // 페어링된 시간
+  List<String> childrenIds; // 페어링된 자식들 ID 목록
+  bool isPaired;            // 페어링 상태
+  DateTime? pairedAt;       // 페어링된 시간
 
   Parent({
     required this.id,

@@ -43,7 +43,10 @@ class WebRTCService {
   // Remote Description 설정 (Answer 수신)
   Future<void> setRemoteDescription(String sessionId) async {
     var sdpData = await _firebaseManager.readSDP(sessionId);
-    RTCSessionDescription description = RTCSessionDescription(sdpData['sdp'], sdpData['type']);
+    RTCSessionDescription description = RTCSessionDescription(
+        sdpData['sdp'],
+        sdpData['type']
+    );
     await _peerConnection?.setRemoteDescription(description);
   }
 

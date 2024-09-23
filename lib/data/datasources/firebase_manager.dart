@@ -5,7 +5,7 @@ import 'package:little_guardian/domain/model/parininginfo.dart';
 class FirebaseManager {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  // WebRTC 관련 기능
+  /// WebRTC 관련 기능
 
   // SDP 저장
   Future<void> saveSDP(String sessionId, String? sdp, String type) async {
@@ -22,19 +22,25 @@ class FirebaseManager {
 
   // ICE 후보자 저장
   Future<void> saveIceCandidate(String sessionId, Map<String, dynamic> candidateData) async {
-    await _firestore.collection('sessions').doc(sessionId).collection('iceCandidates').add(candidateData);
+    await
+    _firestore.collection('sessions')
+        .doc(sessionId).collection('iceCandidates').add(candidateData);
   }
 
   // ICE 후보자 가져오기
   Stream<QuerySnapshot> getIceCandidates(String sessionId) {
-    return _firestore.collection('sessions').doc(sessionId).collection('iceCandidates').snapshots();
+    return
+      _firestore.collection('sessions')
+          .doc(sessionId).collection('iceCandidates').snapshots();
   }
 
-  // 페어링 관련 기능
+  /// 페어링 관련 기능
 
   // 페어링 정보 저장
   Future<void> savePairing(PairingInfo pairingInfo) async {
-    await _firestore.collection('pairings').doc(pairingInfo.pairingCode).set(pairingInfo.toMap());
+    await _firestore.collection('pairings').doc(pairingInfo.pairingCode)
+        .set(pairingInfo.toMap()
+    );
   }
 
   // 페어링 정보 가져오기
@@ -46,11 +52,13 @@ class FirebaseManager {
     return null;
   }
 
-  // 유저 정보 관련 기능
+  /// 유저 정보 관련 기능
 
   // User 정보 저장 (Create/Update)
   Future<void> saveUser(Map<String, dynamic> userData) async {
-    await _firestore.collection('users').doc(userData['id']).set(userData, SetOptions(merge: true));
+    await _firestore.collection('users').doc(userData['id']).set(userData,
+        SetOptions(merge: true)
+    );
   }
 
   // 특정 유저 정보 가져오기 (Read)
