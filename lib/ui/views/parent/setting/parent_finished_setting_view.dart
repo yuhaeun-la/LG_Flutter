@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:little_guardian/ui/style/colors_util.dart';
 import 'package:little_guardian/ui/views/child/home/child_home_view.dart';
-import 'package:little_guardian/ui/views/components/next_page_button.dart';
-import 'package:little_guardian/ui/views/components/setting_top_view.dart';
+import 'package:little_guardian/ui/components/next_page_button.dart';
+import 'package:little_guardian/ui/components/setting_top_view.dart';
 import 'package:little_guardian/ui/views/parent/home/home_view.dart';
 
 class ParentFinishedSettingView extends StatelessWidget {

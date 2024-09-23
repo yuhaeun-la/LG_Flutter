@@ -185,7 +185,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.9.3+2"
-  firebase_core:
+  firebase_domian:
     dependency: "direct main"
     description:
       name: firebase_core

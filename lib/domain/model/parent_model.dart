@@ -1,5 +1,5 @@
 
-import 'package:little_guardian/core/model/child_model.dart';
+import 'package:little_guardian/domain/model/child_model.dart';
 
 class Guardian {
   final String id; // 보호자의 고유 ID 파베에서 끌어옴

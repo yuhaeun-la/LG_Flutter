@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:little_guardian/ui/views/child/setting/child_setting2_view.dart';
-import 'package:little_guardian/ui/views/components/next_page_button.dart';
-import 'package:little_guardian/ui/views/components/setting_text.dart';
-import 'package:little_guardian/ui/views/components/wide_toggle_button.dart';
-import 'package:little_guardian/ui/views/components/setting_top_view.dart';
+import 'package:little_guardian/ui/components/next_page_button.dart';
+import 'package:little_guardian/ui/components/setting_text.dart';
+import 'package:little_guardian/ui/components/wide_toggle_button.dart';
+import 'package:little_guardian/ui/components/setting_top_view.dart';
 import 'package:little_guardian/ui/style/colors_util.dart';
 
 class Setting1View extends StatelessWidget {

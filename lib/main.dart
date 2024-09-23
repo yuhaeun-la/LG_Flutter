@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'package:little_guardian/ui/views/child/setting/child_setting2_view.dart';
-// import 'package:little_guardian/ui/views/components/practice_button.dart';
+// import 'package:little_guardian/ui/components/practice_button.dart';
 // import 'package:little_guardian/ui/views/parent/home/home_view.dart';
 // import 'package:little_guardian/ui/views/splash_view.dart';
 import 'package:firebase_core/firebase_core.dart'; // Firebase Core 패키지 임포트

@@ -1,6 +1,6 @@
 // 더미 Child 객체 생성
-import 'package:little_guardian/core/model/child_model.dart';
-import 'package:little_guardian/core/model/parent_model.dart';
+import 'package:little_guardian/domain/model/child_model.dart';
+import 'package:little_guardian/domain//model/parent_model.dart';
 
 final Child dummyChild1 = Child(
   name: 'Alice',

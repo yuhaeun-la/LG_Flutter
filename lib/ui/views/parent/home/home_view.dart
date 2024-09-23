@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:little_guardian/ui/style/colors_util.dart';
-import 'package:little_guardian/ui/views/components/home_square_button.dart';
-import 'package:little_guardian/ui/views/components/wide_toggle_button.dart';
+import 'package:little_guardian/ui/components/home_square_button.dart';
+import 'package:little_guardian/ui/components/wide_toggle_button.dart';
 import 'package:little_guardian/ui/views/parent/home/child_card.dart';
 import 'package:little_guardian/ui/views/parent/home/emergency_alaram_view.dart';
 import 'package:little_guardian/ui/views/parent/home/sound_listening_view.dart';
