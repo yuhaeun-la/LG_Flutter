@@ -8,7 +8,7 @@ class FirebaseManager {
   // WebRTC 관련 기능
 
   // SDP 저장
-  Future<void> saveSDP(String sessionId, String sdp, String type) async {
+  Future<void> saveSDP(String sessionId, String? sdp, String type) async {
     await _firestore.collection('sessions').doc(sessionId).set({
       'sdp': sdp,
       'type': type,
