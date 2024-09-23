@@ -3,6 +3,8 @@ import 'package:little_guardian/ui/style/colors_util.dart';
 import 'package:lottie/lottie.dart';
 
 class SoundListeningView extends StatefulWidget {
+  const SoundListeningView({super.key});
+
 
   @override
   _SoundListeningViewState createState() => _SoundListeningViewState();

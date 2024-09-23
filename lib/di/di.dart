@@ -1,21 +1,29 @@
-// import 'package:get_it/get_it.dart';
+// import '../data/datasources/firebase_manager.dart';
+//
 //
 // final getIt = GetIt.instance;
 //
 // void setupDI() {
-//   // FirebaseManager 등록
+//   // Data Sources 등록
 //   getIt.registerLazySingleton<FirebaseManager>(() => FirebaseManager());
 //
-//   // SessionManager 등록, FirebaseManager 의존성 주입
-//   getIt.registerLazySingleton<SessionManager>(
-//         () => SessionManager(getIt<FirebaseManager>()),
+//   // Service 등록
+//   getIt.registerLazySingleton<WebRTCService>(() => WebRTCService());
+//
+//   // Repository 등록
+//   getIt.registerLazySingleton<WebRTCConnectionRepository>(
+//         () => WebRTCConnectionRepositoryImpl(
+//       getIt<FirebaseManager>(),
+//     ),
+//   );
+//
+//   // UseCase 등록
+//   getIt.registerLazySingleton<SetupPairingUseCase>(
+//         () => SetupPairingUseCase(getIt<WebRTCConnectionRepository>()),
 //   );
 //
 //   // ViewModel 등록
-//   getIt.registerFactory<SoundListeningViewModel>(
-//         () => SoundListeningViewModel(getIt<SessionManager>()),
-//   );
 //   getIt.registerFactory<PairingViewModel>(
-//         () => PairingViewModel(getIt<FirebaseManager>()),
+//         () => PairingViewModel(getIt<SetupPairingUseCase>()),
 //   );
 // }
