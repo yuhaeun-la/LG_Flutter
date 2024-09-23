@@ -1,10 +1,9 @@
 class Child {
   final String id;
   final String name;
-  final String parentId;
-  final String photoUrl;
-  final bool isPaired;      // 페어링 상태
-  final DateTime? pairedAt; // 페어링된 시간
+  String parentId;
+  String photoUrl;
+  bool isPaired;      // 페어링 상태
 
   Child({
     required this.id,
@@ -12,7 +11,6 @@ class Child {
     required this.parentId,
     required this.photoUrl,
     this.isPaired = false,
-    this.pairedAt,
   });
 
   factory Child.fromMap(Map<String, dynamic> map) {
@@ -22,7 +20,6 @@ class Child {
       parentId: map['parentId'] ?? '',
       photoUrl: map['photoUrl'] ?? '',
       isPaired: map['isPaired'] ?? false,
-      pairedAt: map['pairedAt'] != null ? DateTime.parse(map['pairedAt']) : null,
     );
   }
 
@@ -33,7 +30,6 @@ class Child {
       'parentId': parentId,
       'photoUrl': photoUrl,
       'isPaired': isPaired,
-      'pairedAt': pairedAt?.toIso8601String(),
     };
   }
 }
