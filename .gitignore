@@ -41,3 +41,12 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Google Service Files
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# Firebase CLI configuration file
+firebase.json
+
+

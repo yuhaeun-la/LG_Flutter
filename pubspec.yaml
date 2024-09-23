@@ -55,12 +55,12 @@ flutter:
         - asset: assets/fonts/NanumSquareNeo-aLt.ttf
           weight: 300  # Light
         - asset: assets/fonts/NanumSquareNeo-bRg.ttf
-          weight: 400  # Regular
-        - asset: assets/fonts/NanumSquareNeo-cBd.ttf
           weight: 700  # Bold
         - asset: assets/fonts/NanumSquareNeo-dEb.ttf
           weight: 800  # ExtraBold
         - asset: assets/fonts/NanumSquareNeo-eHv.ttf
+          weight: 400  # Regular
+        - asset: assets/fonts/NanumSquareNeo-cBd.ttf
           weight: 900  # Heavy
     - family: jalnan  # 폰트 패밀리: jalnan
       fonts:
