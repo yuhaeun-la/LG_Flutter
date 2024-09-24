@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:little_guardian/ui/views/parent/home/home_view.dart';
 import 'firebase_options.dart';
 import 'package:provider/provider.dart';
 import 'di/di.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           fontFamily: 'NanumSquareNeo',
         ),
-        home: const SoundListeningView(),
+        home: const HomeView(),
         debugShowCheckedModeBanner: false,
       ),
     );

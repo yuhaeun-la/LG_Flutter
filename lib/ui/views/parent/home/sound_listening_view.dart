@@ -26,7 +26,8 @@ class SoundListeningView extends StatelessWidget {
         elevation: 0,
       ),
       backgroundColor: mainColor,
-      body: Column(
+      body: viewModel.isParent
+          ? Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           const SizedBox(height: 60.0),
@@ -35,7 +36,7 @@ class SoundListeningView extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  viewModel.toggleListening(); // ViewModel의 toggleListening 호출
+                  viewModel.startListening();
                 },
                 child: Stack(
                   alignment: Alignment.center,
@@ -59,6 +60,26 @@ class SoundListeningView extends StatelessWidget {
                             : Icons.hearing_disabled,
                         size: 50.0,
                         color: pointColor,
+                      ),
+                    ),
+                    Positioned(
+                      top: 0,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: viewModel.isParent ? Colors.red : Colors.blue,
+                          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                        ),
+                        onPressed: () {
+                          viewModel.setRole(!viewModel.isParent);
+                        },
+                        child: Text(
+                          viewModel.isParent ? '부모' : '자녀',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
                     ),
                   ],
@@ -85,6 +106,25 @@ class SoundListeningView extends StatelessWidget {
           ),
           const SizedBox(height: 40.0),
         ],
+      )
+          : Center(
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blue,
+            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+          ),
+          onPressed: () {
+            viewModel.setRole(true);
+          },
+          child: Text(
+            '부모로 변경',
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
       ),
     );
   }

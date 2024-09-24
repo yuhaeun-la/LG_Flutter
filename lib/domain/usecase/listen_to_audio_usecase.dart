@@ -1,4 +1,4 @@
-import 'package:little_guardian/domain/repository/webrtc_connection_repository_impl.dart';
+import 'package:little_guardian/domain/repository/webrtc_connection_repository.dart';
 
 class ListenToAudioUseCase {
   final WebRTCConnectionRepository _repository;

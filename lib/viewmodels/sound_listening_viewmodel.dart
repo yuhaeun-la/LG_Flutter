@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:little_guardian/domain/usecase/listen_to_audio_usecase.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class SoundListeningViewModel extends ChangeNotifier {
   final ListenToAudioUseCase _listenToAudioUseCase;
@@ -9,18 +10,26 @@ class SoundListeningViewModel extends ChangeNotifier {
   bool _isListening = false;
   bool get isListening => _isListening;
 
-  void toggleListening() {
-    _isListening = !_isListening;
-    notifyListeners();
+  String _sessionId = '';
+  bool _isParent = true;
+  bool get isParent => _isParent;
 
-    if (_isListening) {
-      startListening();
-    }
+  Future<void> initializeSession() async {
+    final sessionDoc = await FirebaseFirestore.instance.collection('sessions').add({
+      'createdAt': FieldValue.serverTimestamp(),
+      'isActive': true,
+    });
+    _sessionId = sessionDoc.id;
+    notifyListeners();
   }
 
   Future<void> startListening() async {
     try {
+      _isListening = true;
+      notifyListeners();
+
       await _listenToAudioUseCase.execute(_sessionId, _isParent);
+
       _isListening = false;
       notifyListeners();
     } catch (e) {
@@ -30,12 +39,21 @@ class SoundListeningViewModel extends ChangeNotifier {
     }
   }
 
-  // 역할 변경을 위한 메서드 추가
-  bool _isParent = true;
-  String _sessionId = "hardcodedSessionId";
-
   void setRole(bool isParent) {
     _isParent = isParent;
     notifyListeners();
+
+    FirebaseFirestore.instance.collection('sessions').doc(_sessionId).update({
+      'role': _isParent ? 'parent' : 'child',
+    });
+  }
+
+  Future<void> stopListening() async {
+    _isListening = false;
+    notifyListeners();
+
+    await FirebaseFirestore.instance.collection('sessions').doc(_sessionId).update({
+      'isActive': false,
+    });
   }
 }
