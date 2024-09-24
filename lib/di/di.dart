@@ -2,7 +2,7 @@ import 'package:get_it/get_it.dart';
 import 'package:little_guardian/data/datasources/webrtc_service.dart';
 import 'package:little_guardian/domain/usecase/listen_to_audio_usecase.dart';
 import '../viewmodels/sound_listening_viewmodel.dart';
-import '../data/repositories/webrtc_connection_repository_impl.dart';
+import '../domain/usecase/webrtc_connection_repository_impl.dart';
 import '../data/datasources/firebase_manager.dart';
 
 final getIt = GetIt.instance;
